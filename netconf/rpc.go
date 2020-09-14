@@ -94,7 +94,7 @@ type RPCError struct {
 
 // Error generates a string representation of the provided RPC error
 func (re *RPCError) Error() string {
-	return fmt.Sprintf("netconf rpc [%s] '%s'", re.Severity, re.Message)
+	return fmt.Sprintf("netconf rpc [%s] Message:'%s', Path:'%s', Info:'%s' ", re.Severity, re.Message, re.Path, re.Info)
 }
 
 // RPCMethod defines the interface for creating an RPC method.
